@@ -1,0 +1,57 @@
+<script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SocialNetworkApp</title>
+  <%= csrf_meta_tags %>
+
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
+
+<body>
+  <div class="account">
+    Signed in as <%= @user.name %>
+  </div>
+  <nav class="navbar">
+    <form action = "/logout" method="get">
+      <button type="submit"> Log out </button>
+    </form>
+  </nav>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="input-group" id="adv-search">
+          <input type="text" class="form-control search-box" placeholder="Search for tweets" id="search-box"/>
+          <div class="input-group-btn">
+            <div class="btn-group" role="group">
+              <div class="dropdown dropdown-lg">
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span class="caret"></span></button>
+                <div class="dropdown-menu dropdown-menu-right" role="menu">
+                  <form class="form-horizontal" role="form">
+                    <div class="form-group">
+                      <label for="filter">Search by</label>
+                      <select class="form-control" id="filter">
+                        <option value="connection">Connection Name (ex. nytimes) </option>
+                        <option value="hash_tag">Hashtag (ex. nytimes) </option>
+                        <option value="date_time">Date & Time (ex. nytimes since:MM-DD-YYYY-hh-mm-ss)</option>
+                      </select>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <button type="button" class="btn-primary btn-search" onClick="searchTweets()"><img src="search.png" style="width:15px;height:15px;"></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <ul id="tweets" class="tweet-list">
+  </ul>
+</body>
+</html>
