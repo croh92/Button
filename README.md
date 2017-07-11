@@ -11,6 +11,8 @@ Hello. Welcome to twitter search! Here are the instructions for you to run this 
 7. Sign in using your twitter credentials
 8. Search for tweets using the search bar and the filtering methods in the pull down
 	- Please make sure that the format of the search text in the box is the same as the format in the examples.
+	- For the date filter option, you will be returned all tweets containing a certain keyword after the date/time entered.
+		-Format: 'keyword since:MM-DD-YYYY-hh-mm-ss' 
 
 Please e-mail me at croh92@gmail.com if you have any questions!
 
