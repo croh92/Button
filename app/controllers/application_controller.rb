@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
-
+  
   def index
     if session[:user_id]
       @user = User.find_by(uid: session[:user_id])

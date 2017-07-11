@@ -1,3 +1,4 @@
+// Hits the backend endpoints to search for tweets using the different filters
 function searchTweets() {
     var url = "http://localhost:3000/search/twitter";
     var filter = document.getElementById('filter');
@@ -22,6 +23,7 @@ function searchTweets() {
     })
 }
 
+// Displays the tweets as a list
 function displayTweets(data) {
     var tweets = document.getElementById("tweets");
     while (tweets.hasChildNodes()) {
